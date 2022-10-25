@@ -1,0 +1,140 @@
+.wrapper {
+	/* overflow: hidden; */
+	/* position: relative; */
+	min-height: 100%;
+}
+
+body{
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.main {
+}
+
+[class*="__container"]{
+   max-width: 800px;
+   margin: 0 auto;
+   /* height: 4000px; */
+}
+.section{
+   background: #eee;
+   padding: 50px;
+   position: relative;
+   border-radius: 30px;
+}
+.section:not(:last-child){
+   margin-bottom: 20px;
+}
+
+.items__item {
+   color: white;
+   text-align: center;
+   font-weight: 900;
+   padding: 20px;
+}
+.items__item--bg-blue {
+   background: rgb(41, 40, 100);
+}
+.items__item--bg-yellow {
+   background: rgb(194, 179, 42);
+   top: 10px;
+   left: 20px;
+}
+.items__item--bg-pink {
+   background: rgb(184, 32, 151);
+}
+h2{
+   font-size: 40px;
+   font-weight: 700;
+   text-align: center;
+   margin-bottom: 20px;
+}
+/* ===================================================== */
+.section--relative .items__item--bg-yellow{
+   position: relative;
+}
+.section--absolute .items__item--bg-yellow{
+   position: absolute;
+}
+.section--fixed .items__item--bg-yellow{
+   position: fixed;
+}
+/* .section--sticky .items {              експеремент
+   position: static;
+} */
+.section--sticky .items__item--bg-blue{ /* не працює, хоч оверфлоу не заданий =(*/
+   position: sticky;
+   top: 0px;
+}
+.section--z-index{
+   position: relative;
+}
+.section--z-index .items {
+   position: relative;
+}
+.section--z-index .items__item--bg-blue{
+   position: relative;
+   top: 10px;
+   left: 10px;
+   z-index: 2;
+}
+.section--z-index .items__item--bg-pink{
+   position: relative;
+   top: -10px;
+   left: -10px;
+}
+/* ===================================================== */
+.car {
+   max-width: 1200px;
+   margin: 0 auto;
+   text-align: center;
+   position: relative;
+}
+
+.car__item-1 {
+   position: absolute;
+   width: 100%;
+   z-index: 5;
+}
+.car__item-1 img{
+   min-width: 600px;
+}
+.car__item-2 {
+   position: absolute;
+   width: 100%;
+   z-index: 2;
+}
+.car__item-2 img{
+   min-width: 600px;
+}
+.car__item-head {
+   position: absolute;
+   width: 100%;
+   top: 50px;
+   left: 30px;
+   z-index: 1;
+
+}
+.car__item-head  img{
+   min-width: 60px;
+}
+.car__item-wheel-1 {
+   position: absolute;
+   left: 430px;
+   top: 150px;
+   z-index: 3;
+
+}
+.car__item-wheel-1 img{
+   min-width: 80px;
+}
+.car__item-wheel-2 {
+   position: absolute;
+   left: 785px;
+   top: 150px;
+   z-index: 3;
+
+}
+.car__item-wheel-2 img{
+   min-width: 80px;
+}
